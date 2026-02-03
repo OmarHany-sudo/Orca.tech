@@ -1,0 +1,6 @@
+[build]
+  command = "npm run build && curl -X GET https://orcatech.netlify.app/.netlify/functions/ping-search-engines"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

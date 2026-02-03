@@ -1,25 +1,29 @@
 {
-  "name": "bootstrap-v5",
+  "name": "orcatech-website",
   "version": "1.0.0",
-  "description": "Learning bootstrap v5 with sass",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-   "compile:sass": "sass --watch scss:assets/css"
-  },
-  "keywords": [
-    "Bootstrap",
-    "bootstrap-v5",
-    "sass",
-    "learn-bootstrap",
-    "learn-sass"
-  ],
-  "author": "Patrick Muriungi",
-  "license": "ISC",
-  "devDependencies": {
-    "sass": "^1.32.12"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3",
-    "bootstrap": "^5.0.0"
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "framer-motion": "^10.16.0",
+    "gsap": "^3.12.5",
+    "react-hook-form": "^7.52.0",
+    "react-icons": "^4.12.0",
+    "class-variance-authority": "^0.7.0"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.14",
+    "postcss": "^8.4.49",
+    "autoprefixer": "^10.4.20",
+    "typescript": "^5.4.0",
+
+    "@types/react": "^18.2.37",
+    "@types/node": "^20.10.0"
   }
 }
