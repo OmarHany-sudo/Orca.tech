@@ -54,6 +54,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "importance-of-backend",
     "web-performance-optimization",
     "penetration-testing-guide",
+    "why-businesses-need-professional-website",
+    "website-vs-mobile-app-which-to-choose",
+    "how-to-choose-reliable-programming-company",
   ].map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
     lastModified: "2026-02-03",
@@ -68,6 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "website-or-app-which-to-choose-ar",
     "common-mistakes-with-programming-companies-ar",
     "professional-website-increases-sales-ar",
+    "why-businesses-need-professional-website-ar",
   ].map((slug) => ({
     url: `${baseUrl}/ar/blog/${slug}`,
     lastModified: "2026-02-03",

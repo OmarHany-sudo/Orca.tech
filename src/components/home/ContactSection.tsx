@@ -30,7 +30,19 @@ export default function ContactSection() {
 
   const onSubmit = (data: FormData) => {
     setIsSubmitting(true);
-    console.log(data); // Simulating an API request
+    
+    // Create WhatsApp message with form data
+    const message = `Hello OrcaTech,\n\nName: ${data.name}\nEmail: ${data.email}\nPhone: ${data.phone || 'Not provided'}\nProject Type: ${data.projectType}\n\nMessage:\n${data.message}`;
+    
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message);
+    
+    // WhatsApp number: 01033496278 (Egyptian number, format: +201033496278)
+    const whatsappUrl = `https://wa.me/201033496278?text=${encodedMessage}`;
+    
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+    
     setTimeout(() => setIsSubmitting(false), 1000);
   };
 
@@ -159,8 +171,11 @@ export default function ContactSection() {
                 className="w-full py-4 text-lg"
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Sending...' : 'Send Message'}
+                {isSubmitting ? 'Opening WhatsApp...' : 'Send via WhatsApp'}
               </Button>
+              <p className="text-xs text-gray-500 text-center mt-2">
+                You'll be redirected to WhatsApp with your message pre-filled
+              </p>
             </form>
           </div>
 
